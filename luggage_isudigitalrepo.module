@@ -1,0 +1,54 @@
+<?php
+/**
+ * @file
+ * Code for the luggage_isudigitalrepo feature.
+ */
+
+include_once 'luggage_isudigitalrepo.features.inc';
+
+/**
+ * Implements hook_theme().
+ */
+function luggage_isudigitalrepo_theme($existing, $type, $theme, $path) {
+
+  $themes['views_view_fields__digital_repository'] = array(
+    'variables' => array('view' => NULL, 'field' => NULL, 'row' => NULL),
+    'template' => 'views-view-fields--digital-repository',
+    'base hook' => 'views_view_fields',
+    'path' => drupal_get_path('module', 'luggage_isudigitalrepo') . '/templates',
+  );
+
+  $themes['views_view_list__digital_repository__page'] = array(
+    'variables' => array('view' => NULL, 'options' => NULL, 'rows' => NULL, 'title' => NULL),
+    'template' => 'views-view-list--digital-repository--page',
+    'base hook' => 'views_view_list',
+    'path' => drupal_get_path('module', 'luggage_isudigitalrepo') . '/templates',
+  );
+
+  return $themes;
+}
+
+/**
+ * Implements of hook_feed_plugins().
+ */
+function luggage_isudigitalrepo_feeds_plugins() {
+  $info = array();
+  $info['FeedsISUDigitalRepositoryParser'] = array(
+    'name' => 'ISU Digital Repository parser',
+    'description' => 'Parse Dublin Core (oai_dc) metadata and document URLs from the ISU Digital Repository.',
+    'handler' => array(
+      'parent' => 'FeedsOAIParser',
+      'class' => 'FeedsISUDigitalRepositoryParser',
+      'file' => 'FeedsISUDigitalRepositoryParser.inc',
+      'path' => drupal_get_path('module', 'luggage_isudigitalrepo') . '/plugins',
+    ),
+  );
+  return $info;
+}
+
+/**
+ * Implements hook_views_pre_render().
+ */
+function luggage_isudigitalrepo_preprocess_html(&$variables) {
+  drupal_add_css(drupal_get_path('module', 'luggage_isudigitalrepo') . '/css/luggage_isudigitalrepo.css');
+}

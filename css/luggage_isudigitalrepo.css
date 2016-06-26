@@ -1,0 +1,69 @@
+.view-id-digital_repository p.pdf {
+    background-image: url(../images/small_pdf.gif);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: left center;
+    float: left;
+    width: 60px;
+    margin: 0;
+    padding: 0;
+}
+
+.view-id-digital_repository p.pdf a {
+    padding-left: 15px;
+}
+.view-id-digital_repository p.repository_link {
+    margin-left: 60px;
+}
+
+.view-display-id-publications_block p.pdf {
+    display: none !important;
+}
+
+.view-display-id-publications_block p.repository_link {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.zone-content aside .block .view-display-id-publications_block .view-content .item-list .views-row,
+.zone-content aside .block .view-display-id-publications_block .view-content .item-list .node {
+    padding: 10px;
+}
+
+.zone-content aside .block .view-display-id-publications_block .view-content .item-list .node {
+    background: none;
+    border: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+.zone-content aside .block .view-display-id-publications_block .view-content .item-list .views-row:not(.views-row-last) {
+    border-bottom: 1px solid #ddd;
+}
+
+.zone-content aside .block .view-display-id-publications_block .view-content .item-list li {
+    padding: 0;
+    margin: 0;
+}
+
+.zone-content aside .block .view-display-id-publications_block .view-content .item-list li > a {
+    padding: 10px;
+    display: block;
+}
+
+.zone-content aside .block .view-display-id-publications_block .view-content .item-list li:not(:last-child) > a {
+    border-bottom: 1px solid #ddd;
+}
+
+.zone-content aside .block .view-display-id-publications_block .more-link {
+    text-align: left;
+}
+
+.zone-content aside .block .view-display-id-publications_block .more-link > a {
+    padding: 10px 16px;
+}
+
+.zone-content aside .block .view-display-id-publications_block .views-field-title {
+    font-weight: bold;
+}
