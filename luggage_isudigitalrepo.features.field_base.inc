@@ -10,7 +10,7 @@
 function luggage_isudigitalrepo_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_authors'
+  // Exported field_base: 'field_authors'.
   $field_bases['field_authors'] = array(
     'active' => 1,
     'cardinality' => -1,
@@ -31,7 +31,7 @@ function luggage_isudigitalrepo_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_date'
+  // Exported field_base: 'field_date'.
   $field_bases['field_date'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -60,7 +60,7 @@ function luggage_isudigitalrepo_field_default_field_bases() {
     'type' => 'date',
   );
 
-  // Exported field_base: 'field_pdf'
+  // Exported field_base: 'field_pdf'.
   $field_bases['field_pdf'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -89,7 +89,7 @@ function luggage_isudigitalrepo_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_repository_link'
+  // Exported field_base: 'field_repository_link'.
   $field_bases['field_repository_link'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -118,7 +118,7 @@ function luggage_isudigitalrepo_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_sets'
+  // Exported field_base: 'field_sets'.
   $field_bases['field_sets'] = array(
     'active' => 1,
     'cardinality' => -1,

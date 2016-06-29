@@ -10,7 +10,7 @@
 function luggage_isudigitalrepo_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-publication-field_authors'
+  // Exported field_instance: 'node-publication-field_authors'.
   $field_instances['node-publication-field_authors'] = array(
     'bundle' => 'publication',
     'default_value' => NULL,
@@ -81,7 +81,7 @@ function luggage_isudigitalrepo_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-publication-field_date'
+  // Exported field_instance: 'node-publication-field_date'.
   $field_instances['node-publication-field_date'] = array(
     'bundle' => 'publication',
     'deleted' => 0,
@@ -96,6 +96,7 @@ function luggage_isudigitalrepo_field_default_field_instances() {
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
+          'show_remaining_days' => FALSE,
         ),
         'type' => 'date_default',
         'weight' => 2,
@@ -134,7 +135,7 @@ function luggage_isudigitalrepo_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-publication-field_pdf'
+  // Exported field_instance: 'node-publication-field_pdf'.
   $field_instances['node-publication-field_pdf'] = array(
     'bundle' => 'publication',
     'default_value' => NULL,
@@ -191,7 +192,7 @@ function luggage_isudigitalrepo_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-publication-field_repository_link'
+  // Exported field_instance: 'node-publication-field_repository_link'.
   $field_instances['node-publication-field_repository_link'] = array(
     'bundle' => 'publication',
     'default_value' => NULL,
@@ -248,7 +249,7 @@ function luggage_isudigitalrepo_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-publication-field_sets'
+  // Exported field_instance: 'node-publication-field_sets'.
   $field_instances['node-publication-field_sets'] = array(
     'bundle' => 'publication',
     'default_value' => NULL,
