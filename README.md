@@ -18,3 +18,4 @@ This module requires a patched version of feeds_oai_pmh. Apply these patches:
    * **Set to fetch** Your collection in the Digital Repository
 4. Go to admin/config/search/apachesolr and disable indexing of the 'Publication' content type
 5. Go to admin/structure/views/nojs/config-item/digital_repository/default/footer/area and change 'set_name' in the link URL to your Digital Repository collection ID
+6. Go to admin/structure/views/nojs/config-item/digital_repository/publications/footer/area and change 'set_name' in the link URL to your Digital Repository collection ID
