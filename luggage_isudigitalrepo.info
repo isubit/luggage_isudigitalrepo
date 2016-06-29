@@ -10,6 +10,7 @@ dependencies[] = feeds
 dependencies[] = feeds_oai_pmh
 dependencies[] = feeds_ui
 dependencies[] = link
+dependencies[] = luggage_ckeditor
 dependencies[] = strongarm
 dependencies[] = text
 dependencies[] = views
