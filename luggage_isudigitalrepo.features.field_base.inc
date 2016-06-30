@@ -10,13 +10,13 @@
 function luggage_isudigitalrepo_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_authors'.
-  $field_bases['field_authors'] = array(
+  // Exported field_base: 'field_publication_authors'.
+  $field_bases['field_publication_authors'] = array(
     'active' => 1,
     'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_authors',
+    'field_name' => 'field_publication_authors',
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -31,13 +31,13 @@ function luggage_isudigitalrepo_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_date'.
-  $field_bases['field_date'] = array(
+  // Exported field_base: 'field_publication_date'.
+  $field_bases['field_publication_date'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_date',
+    'field_name' => 'field_publication_date',
     'indexes' => array(),
     'locked' => 0,
     'module' => 'date',
@@ -60,13 +60,13 @@ function luggage_isudigitalrepo_field_default_field_bases() {
     'type' => 'date',
   );
 
-  // Exported field_base: 'field_pdf'.
-  $field_bases['field_pdf'] = array(
+  // Exported field_base: 'field_publication_pdf'.
+  $field_bases['field_publication_pdf'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_pdf',
+    'field_name' => 'field_publication_pdf',
     'indexes' => array(),
     'locked' => 0,
     'module' => 'link',
@@ -89,13 +89,13 @@ function luggage_isudigitalrepo_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_repository_link'.
-  $field_bases['field_repository_link'] = array(
+  // Exported field_base: 'field_publication_link'.
+  $field_bases['field_publication_link'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_repository_link',
+    'field_name' => 'field_publication_link',
     'indexes' => array(),
     'locked' => 0,
     'module' => 'link',
@@ -118,13 +118,13 @@ function luggage_isudigitalrepo_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_sets'.
-  $field_bases['field_sets'] = array(
+  // Exported field_base: 'field_publication_sets'.
+  $field_bases['field_publication_sets'] = array(
     'active' => 1,
     'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_sets',
+    'field_name' => 'field_publication_sets',
     'indexes' => array(
       'format' => array(
         0 => 'format',

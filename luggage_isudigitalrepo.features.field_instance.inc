@@ -10,8 +10,8 @@
 function luggage_isudigitalrepo_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-publication-field_authors'.
-  $field_instances['node-publication-field_authors'] = array(
+  // Exported field_instance: 'node-publication-field_publication_authors'.
+  $field_instances['node-publication-field_publication_authors'] = array(
     'bundle' => 'publication',
     'default_value' => NULL,
     'deleted' => 0,
@@ -32,7 +32,7 @@ function luggage_isudigitalrepo_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_authors',
+    'field_name' => 'field_publication_authors',
     'label' => 'Authors',
     'placeholder' => '',
     'required' => 0,
@@ -81,8 +81,8 @@ function luggage_isudigitalrepo_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-publication-field_date'.
-  $field_instances['node-publication-field_date'] = array(
+  // Exported field_instance: 'node-publication-field_publication_date'.
+  $field_instances['node-publication-field_publication_date'] = array(
     'bundle' => 'publication',
     'deleted' => 0,
     'description' => '',
@@ -109,7 +109,7 @@ function luggage_isudigitalrepo_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_date',
+    'field_name' => 'field_publication_date',
     'label' => 'Publication Date',
     'required' => 0,
     'settings' => array(
@@ -135,8 +135,8 @@ function luggage_isudigitalrepo_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-publication-field_pdf'.
-  $field_instances['node-publication-field_pdf'] = array(
+  // Exported field_instance: 'node-publication-field_publication_pdf'.
+  $field_instances['node-publication-field_publication_pdf'] = array(
     'bundle' => 'publication',
     'default_value' => NULL,
     'deleted' => 0,
@@ -157,7 +157,7 @@ function luggage_isudigitalrepo_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_pdf',
+    'field_name' => 'field_publication_pdf',
     'label' => 'PDF',
     'required' => 0,
     'settings' => array(
@@ -192,8 +192,8 @@ function luggage_isudigitalrepo_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-publication-field_repository_link'.
-  $field_instances['node-publication-field_repository_link'] = array(
+  // Exported field_instance: 'node-publication-field_publication_link'.
+  $field_instances['node-publication-field_publication_link'] = array(
     'bundle' => 'publication',
     'default_value' => NULL,
     'deleted' => 0,
@@ -214,7 +214,7 @@ function luggage_isudigitalrepo_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_repository_link',
+    'field_name' => 'field_publication_link',
     'label' => 'Repository Link',
     'required' => 0,
     'settings' => array(
@@ -249,8 +249,8 @@ function luggage_isudigitalrepo_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-publication-field_sets'.
-  $field_instances['node-publication-field_sets'] = array(
+  // Exported field_instance: 'node-publication-field_publication_sets'.
+  $field_instances['node-publication-field_publication_sets'] = array(
     'bundle' => 'publication',
     'default_value' => NULL,
     'deleted' => 0,
@@ -271,7 +271,7 @@ function luggage_isudigitalrepo_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_sets',
+    'field_name' => 'field_publication_sets',
     'label' => 'Sets',
     'placeholder' => '',
     'required' => 0,

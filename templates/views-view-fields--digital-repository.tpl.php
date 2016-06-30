@@ -39,8 +39,8 @@
 
 ?>
 <p class="pdf">
-  <a href="<?php print $fields['field_pdf']->content; ?>" target="_blank" title="Download PDF"><abbr title="Portable Document Format">PDF</abbr></a>
+  <a href="<?php print $fields['field_publication_pdf']->content; ?>" target="_blank" title="Download PDF"><abbr title="Portable Document Format">PDF</abbr></a>
 </p>
 <p class="repository_link">
-  <a href="<?php print $fields['field_repository_link']->content; ?>"><?php print $fields['title']->content; ?></a>, <?php print $fields['field_authors']->content; ?>
+  <a href="<?php print $fields['field_publication_link']->content; ?>"><?php print $fields['title']->content; ?></a>, <?php print $fields['field_publication_authors']->content; ?>
 </p>

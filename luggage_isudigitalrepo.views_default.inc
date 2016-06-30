@@ -36,7 +36,7 @@ function luggage_isudigitalrepo_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'list';
   $handler->display->display_options['style_options']['grouping'] = array(
     0 => array(
-      'field' => 'field_date',
+      'field' => 'field_publication_date',
       'rendered' => 1,
       'rendered_strip' => 1,
     ),
@@ -44,7 +44,7 @@ function luggage_isudigitalrepo_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['row_options']['inline'] = array(
     'title' => 'title',
-    'field_authors' => 'field_authors',
+    'field_publication_authors' => 'field_publication_authors',
   );
   $handler->display->display_options['row_options']['separator'] = ',';
   $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
@@ -66,47 +66,47 @@ function luggage_isudigitalrepo_views_default_views() {
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
   /* Field: Content: Authors */
-  $handler->display->display_options['fields']['field_authors']['id'] = 'field_authors';
-  $handler->display->display_options['fields']['field_authors']['table'] = 'field_data_field_authors';
-  $handler->display->display_options['fields']['field_authors']['field'] = 'field_authors';
-  $handler->display->display_options['fields']['field_authors']['label'] = '';
-  $handler->display->display_options['fields']['field_authors']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_authors']['type'] = 'text_plain';
-  $handler->display->display_options['fields']['field_authors']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_publication_authors']['id'] = 'field_publication_authors';
+  $handler->display->display_options['fields']['field_publication_authors']['table'] = 'field_data_field_publication_authors';
+  $handler->display->display_options['fields']['field_publication_authors']['field'] = 'field_publication_authors';
+  $handler->display->display_options['fields']['field_publication_authors']['label'] = '';
+  $handler->display->display_options['fields']['field_publication_authors']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_publication_authors']['type'] = 'text_plain';
+  $handler->display->display_options['fields']['field_publication_authors']['delta_offset'] = '0';
   /* Field: Content: PDF */
-  $handler->display->display_options['fields']['field_pdf']['id'] = 'field_pdf';
-  $handler->display->display_options['fields']['field_pdf']['table'] = 'field_data_field_pdf';
-  $handler->display->display_options['fields']['field_pdf']['field'] = 'field_pdf';
-  $handler->display->display_options['fields']['field_pdf']['label'] = '';
-  $handler->display->display_options['fields']['field_pdf']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_pdf']['click_sort_column'] = 'url';
-  $handler->display->display_options['fields']['field_pdf']['type'] = 'link_plain';
+  $handler->display->display_options['fields']['field_publication_pdf']['id'] = 'field_publication_pdf';
+  $handler->display->display_options['fields']['field_publication_pdf']['table'] = 'field_data_field_publication_pdf';
+  $handler->display->display_options['fields']['field_publication_pdf']['field'] = 'field_publication_pdf';
+  $handler->display->display_options['fields']['field_publication_pdf']['label'] = '';
+  $handler->display->display_options['fields']['field_publication_pdf']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_publication_pdf']['click_sort_column'] = 'url';
+  $handler->display->display_options['fields']['field_publication_pdf']['type'] = 'link_plain';
   /* Field: Content: Repository Link */
-  $handler->display->display_options['fields']['field_repository_link']['id'] = 'field_repository_link';
-  $handler->display->display_options['fields']['field_repository_link']['table'] = 'field_data_field_repository_link';
-  $handler->display->display_options['fields']['field_repository_link']['field'] = 'field_repository_link';
-  $handler->display->display_options['fields']['field_repository_link']['label'] = '';
-  $handler->display->display_options['fields']['field_repository_link']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_repository_link']['click_sort_column'] = 'url';
-  $handler->display->display_options['fields']['field_repository_link']['type'] = 'link_plain';
+  $handler->display->display_options['fields']['field_publication_link']['id'] = 'field_publication_link';
+  $handler->display->display_options['fields']['field_publication_link']['table'] = 'field_data_field_publication_link';
+  $handler->display->display_options['fields']['field_publication_link']['field'] = 'field_publication_link';
+  $handler->display->display_options['fields']['field_publication_link']['label'] = '';
+  $handler->display->display_options['fields']['field_publication_link']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_publication_link']['click_sort_column'] = 'url';
+  $handler->display->display_options['fields']['field_publication_link']['type'] = 'link_plain';
   /* Field: Content: Publication Date */
-  $handler->display->display_options['fields']['field_date']['id'] = 'field_date';
-  $handler->display->display_options['fields']['field_date']['table'] = 'field_data_field_date';
-  $handler->display->display_options['fields']['field_date']['field'] = 'field_date';
-  $handler->display->display_options['fields']['field_date']['label'] = '';
-  $handler->display->display_options['fields']['field_date']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_date']['settings'] = array(
+  $handler->display->display_options['fields']['field_publication_date']['id'] = 'field_publication_date';
+  $handler->display->display_options['fields']['field_publication_date']['table'] = 'field_data_field_publication_date';
+  $handler->display->display_options['fields']['field_publication_date']['field'] = 'field_publication_date';
+  $handler->display->display_options['fields']['field_publication_date']['label'] = '';
+  $handler->display->display_options['fields']['field_publication_date']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_publication_date']['settings'] = array(
     'format_type' => 'year_only',
     'fromto' => 'both',
     'multiple_number' => '',
     'multiple_from' => '',
     'multiple_to' => '',
   );
-  /* Sort criterion: Content: Publication Date (field_date) */
-  $handler->display->display_options['sorts']['field_date_value']['id'] = 'field_date_value';
-  $handler->display->display_options['sorts']['field_date_value']['table'] = 'field_data_field_date';
-  $handler->display->display_options['sorts']['field_date_value']['field'] = 'field_date_value';
-  $handler->display->display_options['sorts']['field_date_value']['order'] = 'DESC';
+  /* Sort criterion: Content: Publication Date (field_publication_date) */
+  $handler->display->display_options['sorts']['field_publication_date_value']['id'] = 'field_publication_date_value';
+  $handler->display->display_options['sorts']['field_publication_date_value']['table'] = 'field_data_field_publication_date';
+  $handler->display->display_options['sorts']['field_publication_date_value']['field'] = 'field_publication_date_value';
+  $handler->display->display_options['sorts']['field_publication_date_value']['order'] = 'DESC';
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -193,7 +193,7 @@ function luggage_isudigitalrepo_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['row_options']['inline'] = array(
     'title' => 'title',
-    'field_authors' => 'field_authors',
+    'field_publication_authors' => 'field_publication_authors',
   );
   $handler->display->display_options['row_options']['separator'] = ',';
   $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
