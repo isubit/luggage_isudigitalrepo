@@ -17,6 +17,11 @@
     margin-left: 60px;
 }
 
+@media (max-width: 1219px) and (min-width: 980px) {
+    .view-id-digital_repository p.repository_link  a {
+        display: inline;
+    }
+}
 .view-display-id-publications_block p.pdf {
     display: none !important;
 }
