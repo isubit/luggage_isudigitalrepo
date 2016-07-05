@@ -15,8 +15,9 @@ function luggage_isudigitalrepo_theme($existing, $type, $theme, $path) {
 
   $themes['luggage_isudigitalrepo_bepress_widget'] = array(
     'variables' => array(
-      'site_title' => "",
-      'site_link' => ""
+      'map_context' => '',
+      'site_title' => '',
+      'site_link' => ''
     ),
     'template' => 'luggage-isudigitalrepo-bepress-widget',
     'path' => drupal_get_path('module', 'luggage_isudigitalrepo') . '/templates',
@@ -44,7 +45,11 @@ function luggage_isudigitalrepo_theme($existing, $type, $theme, $path) {
  * Preprocess function for the luggage_isudigitalrepo_bepress_widget theme template
  */
 function template_preprocess_luggage_isudigitalrepo_bepress_widget(&$variables) {
-
+  
+  if (!empty($variables['map_context'])) {
+    $variables['map_context'] = drupal_json_encode($variables['map_context']);
+  }
+  
   if (!empty($variables['site_title'])) {
     $variables['site_title'] = drupal_json_encode($variables['site_title']);
   }
@@ -76,6 +81,16 @@ function luggage_isudigitalrepo_block_configure($delta = '') {
   switch ($delta) {
 
     case 'bepress_widget':
+      
+      $form['map_context'] = array(
+        '#type' => 'textfield',
+        '#title' => t('Map Context'),
+        '#default_value' => variable_get('luggage_isudigitalrepo_bepress_widget_map_context', ''),
+        '#maxlength' => 255,
+        '#description' => t('mapContext property value for the widget'),
+        '#required' => TRUE,
+        '#weight' => -18,
+      );
 
       $form['site_title'] = array(
         '#type' => 'textfield',
@@ -114,6 +129,7 @@ function luggage_isudigitalrepo_block_save($delta = '', $edit = array()) {
 
     case 'bepress_widget':
 
+      variable_set('luggage_isudigitalrepo_bepress_widget_map_context', $edit['map_context']);
       variable_set('luggage_isudigitalrepo_bepress_widget_site_title', $edit['site_title']);
       variable_set('luggage_isudigitalrepo_bepress_widget_site_link', $edit['site_link']);
 
@@ -134,6 +150,8 @@ function luggage_isudigitalrepo_block_view($delta = '') {
 
     case 'bepress_widget':
 
+      $map_context = variable_get('luggage_isudigitalrepo_bepress_widget_map_context', '');
+
       $site_title = variable_get('luggage_isudigitalrepo_bepress_widget_site_title', '');
 
       if (empty($site_title)) {
@@ -142,9 +160,9 @@ function luggage_isudigitalrepo_block_view($delta = '') {
 
       $site_link = variable_get('luggage_isudigitalrepo_bepress_widget_site_link', '');
 
-      if (!empty($site_title) && !empty($site_link)) {
+      if (!empty($map_context) && !empty($site_title) && !empty($site_link)) {
         $block['subject'] = t('Recent Publications');
-        $block['content'] = theme('luggage_isudigitalrepo_bepress_widget', array('site_title' => $site_title, 'site_link' => $site_link));
+        $block['content'] = theme('luggage_isudigitalrepo_bepress_widget', array('map_context' => $map_context, 'site_title' => $site_title, 'site_link' => $site_link));
       }
 
       break;
@@ -154,7 +172,6 @@ function luggage_isudigitalrepo_block_view($delta = '') {
   return $block;
 
 }
-
 
 /**
  * Implements hook_feed_plugins().

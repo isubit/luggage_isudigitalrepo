@@ -2,7 +2,7 @@
 <script>
   window.rdrAsync = function() {
     RDR.init({
-      mapContext: "2338357",
+      mapContext: <?php print $map_context; ?>,
       datastreamHost: "datastream.bepress.com",
       datastreamPort: "443",
       datastreamStaticRoot: "//assets.bepress.com/current/",
